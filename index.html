@@ -27,7 +27,6 @@
     overflow-x: hidden;
   }
 
-  /* DAMASK SVG BACKGROUND */
   body::before {
     content: '';
     position: fixed;
@@ -46,7 +45,6 @@
     padding: 0 24px 80px;
   }
 
-  /* HEADER */
   .header {
     text-align: center;
     padding: 60px 0 40px;
@@ -65,10 +63,7 @@
     height: 1px;
     background: linear-gradient(to right, transparent, var(--gold), transparent);
   }
-  .header-rule span {
-    font-size: 20px;
-    color: var(--gold);
-  }
+  .header-rule span { font-size: 20px; color: var(--gold); }
 
   .book-cover-wrap {
     display: flex;
@@ -133,7 +128,6 @@
     margin: 0 auto 36px;
   }
 
-  /* BUTTONS */
   .btn-group {
     display: flex;
     gap: 16px;
@@ -157,10 +151,7 @@
     display: inline-block;
     transition: all 0.2s;
   }
-  .btn-primary:hover {
-    background: var(--gold-dark);
-    border-color: var(--gold-dark);
-  }
+  .btn-primary:hover { background: var(--gold-dark); border-color: var(--gold-dark); }
 
   .btn-secondary {
     font-family: 'Cormorant Garamond', serif;
@@ -177,12 +168,8 @@
     display: inline-block;
     transition: all 0.2s;
   }
-  .btn-secondary:hover {
-    background: var(--gold-dark);
-    color: var(--cream);
-  }
+  .btn-secondary:hover { background: var(--gold-dark); color: var(--cream); }
 
-  /* DIVIDER */
   .divider {
     display: flex;
     align-items: center;
@@ -195,13 +182,8 @@
     height: 1px;
     background: linear-gradient(to right, transparent, var(--gold), transparent);
   }
-  .divider-ornament {
-    font-size: 22px;
-    color: var(--gold);
-    line-height: 1;
-  }
+  .divider-ornament { font-size: 22px; color: var(--gold); line-height: 1; }
 
-  /* SECTION TITLE */
   .section-label {
     text-align: center;
     font-family: 'Cormorant Garamond', serif;
@@ -213,7 +195,6 @@
     margin-bottom: 32px;
   }
 
-  /* PRAISE */
   .praise-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -260,7 +241,6 @@
     color: var(--gold-dark);
   }
 
-  /* FRAMEWORKS */
   .frameworks {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -293,7 +273,6 @@
     line-height: 1.4;
   }
 
-  /* AUTHOR */
   .author-section {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -312,7 +291,13 @@
   }
 
   @media (max-width: 560px) {
-    .author-title-block { text-align: left; border-right: none; border-bottom: 1px solid var(--gold); padding-right: 0; padding-bottom: 20px; }
+    .author-title-block {
+      text-align: left;
+      border-right: none;
+      border-bottom: 1px solid var(--gold);
+      padding-right: 0;
+      padding-bottom: 20px;
+    }
   }
 
   .author-name {
@@ -348,7 +333,37 @@
     color: var(--charcoal);
   }
 
-  /* FOOTER */
+  .contact-section {
+    text-align: center;
+    margin-top: 8px;
+  }
+
+  .contact-section p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--charcoal-mid);
+    line-height: 1.9;
+    margin-bottom: 4px;
+  }
+
+  .contact-section a {
+    color: var(--gold-dark);
+    text-decoration: none;
+  }
+  .contact-section a:hover { text-decoration: underline; }
+
+  .contact-section .pivot-line {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-top: 24px;
+    letter-spacing: 0.02em;
+  }
+
   .footer {
     margin-top: 64px;
     padding-top: 32px;
@@ -365,10 +380,7 @@
     margin-bottom: 12px;
   }
 
-  .footer-links a {
-    color: var(--gold-dark);
-    text-decoration: none;
-  }
+  .footer-links a { color: var(--gold-dark); text-decoration: none; }
   .footer-links a:hover { text-decoration: underline; }
 
   .footer-note {
@@ -378,18 +390,15 @@
     color: var(--grey);
   }
 
-  /* FADE IN */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
   }
 
-  .header, .praise-grid, .frameworks, .author-section {
-    animation: fadeUp 0.8s ease both;
-  }
-  .praise-grid { animation-delay: 0.15s; }
-  .frameworks { animation-delay: 0.25s; }
-  .author-section { animation-delay: 0.35s; }
+  .header { animation: fadeUp 0.8s ease both; }
+  .praise-grid { animation: fadeUp 0.8s ease 0.15s both; }
+  .frameworks { animation: fadeUp 0.8s ease 0.25s both; }
+  .author-section { animation: fadeUp 0.8s ease 0.35s both; }
 </style>
 </head>
 <body>
@@ -476,14 +485,26 @@
     </div>
   </div>
 
+  <!-- CONTACT / CLOSING -->
+  <div class="divider"><span class="divider-ornament">❧</span></div>
+
+  <div class="contact-section">
+    <p>For resources, community, and continued learning, visit <a href="https://thoughtchemistry.io">ThoughtChemistry.io</a></p>
+    <p>For book club circles, workshops, and speaking inquiries, email <a href="mailto:kerinhayden@gmail.com">kerinhayden@gmail.com</a></p>
+    <p>Follow the conversation: <a href="https://instagram.com/mskerinhayden">@mskerinhayden</a></p>
+    <p class="pivot-line">Thank you for reading. Thank you for thinking. Thank you for being here.<br>Now go PIVOT. The world needs you present.</p>
+  </div>
+
   <!-- FOOTER -->
   <footer class="footer">
     <p class="footer-links">
-      <a href="mailto:contact@thoughtchemistry.com">contact@thoughtchemistry.com</a>
+      <a href="mailto:kerinhayden@gmail.com">kerinhayden@gmail.com</a>
       &nbsp;·&nbsp;
-      <a href="https://thoughtchemistry.com">ThoughtChemistry.com</a>
+      <a href="https://thoughtchemistry.io">ThoughtChemistry.io</a>
       &nbsp;·&nbsp;
       <a href="https://instagram.com/mskerinhayden">@mskerinhayden</a>
+      &nbsp;·&nbsp;
+      734-996-7653
     </p>
     <p class="footer-note">ISBN: 979-8-9956718-1-7 · First Edition · Published by Thought Chemistry Press, Ann Arbor, Michigan</p>
   </footer>
