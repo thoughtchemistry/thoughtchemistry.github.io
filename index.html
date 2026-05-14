@@ -26,4 +26,115 @@
   .header-rule::before, .header-rule::after { content: ''; flex: 1; height: 1px; background: linear-gradient(to right, transparent, var(--gold), transparent); }
   .header-rule span { font-size: 20px; color: var(--gold); }
   .book-cover-wrap { display: flex; justify-content: center; margin-bottom: 40px; }
-  .book-cover { width: 220px; border-radius: 4px; box-shadow: 8px 12px 40
+  .book-cover { width: 220px; border-radius: 4px; box-shadow: 8px 12px 40px rgba(42,37,32,0.35), 2px 4px 12px rgba(42,37,32,0.2); display: block; }
+  .main-headline { font-family: 'Cormorant Garamond', serif; font-size: 15px; font-weight: 300; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 16px; }
+  .book-title { font-family: 'Playfair Display', serif; font-size: clamp(36px, 7vw, 56px); font-weight: 700; line-height: 1.05; color: var(--charcoal); margin-bottom: 12px; }
+  .book-subtitle { font-family: 'Cormorant Garamond', serif; font-size: clamp(16px, 3vw, 22px); font-weight: 300; font-style: italic; color: var(--charcoal-mid); margin-bottom: 20px; }
+  .byline { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 600; letter-spacing: 0.08em; color: var(--gold-dark); margin-bottom: 32px; }
+  .tagline { font-family: 'Cormorant Garamond', serif; font-size: clamp(17px, 2.5vw, 21px); font-style: italic; font-weight: 300; color: var(--charcoal-mid); line-height: 1.6; max-width: 520px; margin: 0 auto 36px; }
+  .btn-group { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 12px; }
+  .btn-primary { font-family: 'Cormorant Garamond', serif; font-size: 15px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cream); background: var(--charcoal); border: 1.5px solid var(--charcoal); padding: 14px 32px; cursor: pointer; text-decoration: none; display: inline-block; transition: all 0.2s; }
+  .btn-primary:hover { background: var(--gold-dark); border-color: var(--gold-dark); }
+  .btn-secondary { font-family: 'Cormorant Garamond', serif; font-size: 15px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--charcoal); background: transparent; border: 1.5px solid var(--gold-dark); padding: 14px 32px; cursor: pointer; text-decoration: none; display: inline-block; transition: all 0.2s; }
+  .btn-secondary:hover { background: var(--gold-dark); color: var(--cream); }
+  .divider { display: flex; align-items: center; gap: 20px; margin: 56px 0 48px; }
+  .divider::before, .divider::after { content: ''; flex: 1; height: 1px; background: linear-gradient(to right, transparent, var(--gold), transparent); }
+  .divider-ornament { font-size: 22px; color: var(--gold); line-height: 1; }
+  .section-label { text-align: center; font-family: 'Cormorant Garamond', serif; font-size: 12px; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 32px; }
+  .praise-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-bottom: 8px; }
+  .praise-card { background: rgba(253,246,227,0.7); border: 1px solid rgba(200,164,74,0.3); padding: 28px 28px 24px; position: relative; }
+  .praise-card::before { content: '\201C'; font-family: 'Playfair Display', serif; font-size: 72px; color: var(--gold-light); position: absolute; top: -8px; left: 16px; line-height: 1; }
+  .praise-text { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-style: italic; font-weight: 300; line-height: 1.65; color: var(--charcoal-mid); margin-bottom: 14px; position: relative; z-index: 1; }
+  .praise-source { font-family: 'Cormorant Garamond', serif; font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-dark); }
+  .frameworks { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 2px; margin: 8px 0; }
+  .framework-block { background: rgba(42,37,32,0.88); color: var(--parchment); padding: 28px 20px; text-align: center; }
+  .framework-name { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--gold-light); margin-bottom: 8px; letter-spacing: 0.05em; }
+  .framework-desc { font-family: 'Cormorant Garamond', serif; font-size: 14px; font-weight: 300; font-style: italic; color: rgba(245,232,200,0.75); line-height: 1.4; }
+  .author-section { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; align-items: start; }
+  @media (max-width: 560px) { .author-section { grid-template-columns: 1fr; } }
+  .author-title-block { text-align: right; padding-right: 24px; border-right: 2px solid var(--gold); }
+  @media (max-width: 560px) { .author-title-block { text-align: left; border-right: none; border-bottom: 1px solid var(--gold); padding-right: 0; padding-bottom: 20px; } }
+  .author-name { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--charcoal); line-height: 1.2; margin-bottom: 6px; }
+  .author-cred { font-family: 'Cormorant Garamond', serif; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-dark); }
+  .author-bio { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 300; font-style: italic; line-height: 1.7; color: var(--charcoal-mid); }
+  .author-bio strong { font-style: normal; font-weight: 600; color: var(--charcoal); }
+  .contact-section { text-align: center; margin-top: 8px; }
+  .contact-section p { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-style: italic; font-weight: 300; color: var(--charcoal-mid); line-height: 1.9; margin-bottom: 4px; }
+  .contact-section a { color: var(--gold-dark); text-decoration: none; }
+  .contact-section a:hover { text-decoration: underline; }
+  .contact-section .pivot-line { font-family: 'Playfair Display', serif; font-size: 20px; font-style: normal; font-weight: 700; color: var(--charcoal); margin-top: 24px; letter-spacing: 0.02em; }
+  .footer { margin-top: 64px; padding-top: 32px; border-top: 1px solid var(--gold); text-align: center; }
+  .footer-links { font-family: 'Cormorant Garamond', serif; font-size: 15px; font-weight: 400; letter-spacing: 0.08em; color: var(--gold-dark); margin-bottom: 12px; }
+  .footer-links a { color: var(--gold-dark); text-decoration: none; }
+  .footer-links a:hover { text-decoration: underline; }
+  .footer-note { font-family: 'Cormorant Garamond', serif; font-size: 13px; font-style: italic; color: var(--grey); }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  .header { animation: fadeUp 0.8s ease both; }
+  .praise-grid { animation: fadeUp 0.8s ease 0.15s both; }
+  .frameworks { animation: fadeUp 0.8s ease 0.25s both; }
+  .author-section { animation: fadeUp 0.8s ease 0.35s both; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="header">
+    <div class="header-rule"><span>✦</span></div>
+    <div class="book-cover-wrap">
+      <img src="The_Grey_Cover_5_11.jpg" alt="The Grey book cover" class="book-cover" onerror="this.style.display='none'">
+    </div>
+    <p class="main-headline">Now Available</p>
+    <h1 class="book-title">The Grey</h1>
+    <p class="book-subtitle">The Book AI Would Never Write About Itself</p>
+    <p class="byline">Ms. Ker'in Hayden, M.Ed.² &amp; Her AI Bots</p>
+    <p class="tagline">You don't have to love it. You don't have to fear it.<br>You just have to think clearly about it.</p>
+    <div class="btn-group">
+      <a href="https://kerinhayden.gumroad.com/l/gafkw" class="btn-primary">Get the Book — $9.99</a>
+      <a href="https://kerinhayden.gumroad.com/l/gafkw" class="btn-secondary">Read Chapter 1 Free</a>
+    </div>
+  </header>
+  <div class="divider"><span class="divider-ornament">❧</span></div>
+  <p class="section-label">Advance Praise</p>
+  <div class="praise-grid">
+    <div class="praise-card"><p class="praise-text">I read one chapter and then stared at the wall for a while.</p><p class="praise-source">— Early Access Copy</p></div>
+    <div class="praise-card"><p class="praise-text">Thank you for finally giving the world something worth a quick read. Well done.</p><p class="praise-source">— Reader</p></div>
+    <div class="praise-card"><p class="praise-text">I laughed out loud and was informed. Not horrible, friend.</p><p class="praise-source">— Jen S., Early Reader</p></div>
+    <div class="praise-card"><p class="praise-text">Side effects may include pausing, rereading, and an unexplained desire to sit quietly.</p><p class="praise-source">— John B., Self-Titled Comic</p></div>
+  </div>
+  <div class="divider"><span class="divider-ornament">❧</span></div>
+  <p class="section-label">Four Frameworks Inside</p>
+  <div class="frameworks">
+    <div class="framework-block"><p class="framework-name">THE GREY</p><p class="framework-desc">The space between love it and fear it — where real decisions get made</p></div>
+    <div class="framework-block"><p class="framework-name">PIVOT</p><p class="framework-desc">Move with change without losing what makes you, you</p></div>
+    <div class="framework-block"><p class="framework-name">SEED</p><p class="framework-desc">Plant intentional habits in the middle of chaos</p></div>
+    <div class="framework-block"><p class="framework-name">C.O.T.</p><p class="framework-desc">Protect your most finite resource — your attention</p></div>
+  </div>
+  <div class="divider"><span class="divider-ornament">❧</span></div>
+  <p class="section-label">About the Author</p>
+  <div class="author-section">
+    <div class="author-title-block">
+      <p class="author-name">Ms. Ker'in Hayden</p>
+      <p class="author-cred">M.Ed.² &amp; Her AI Bots</p>
+    </div>
+    <div>
+      <p class="author-bio">Realtor, broker, educator, and founder of <strong>Thought Chemistry</strong> — a framework for intentional thinking in the age of AI. Operator of <strong>Aspire Ann Arbor</strong> coworking space and creator of the <strong>Living Grey</strong> platform. Based in Ann Arbor, Michigan. She wrote this book with her AI bots. They helped more than she expected and less than they thought.</p>
+    </div>
+  </div>
+  <div class="divider"><span class="divider-ornament">❧</span></div>
+  <div class="contact-section">
+    <p>For resources, community, and continued learning, visit <a href="https://thoughtchemistry.io">ThoughtChemistry.io</a></p>
+    <p>For book club circles, workshops, and speaking inquiries, email <a href="mailto:kerinhayden@gmail.com">kerinhayden@gmail.com</a></p>
+    <p>Follow the conversation: <a href="https://instagram.com/mskerinhayden">@mskerinhayden</a></p>
+    <p class="pivot-line">Thank you for reading. Thank you for thinking. Thank you for being here.<br>Now go PIVOT. The world needs you present.</p>
+  </div>
+  <footer class="footer">
+    <p class="footer-links">
+      <a href="mailto:kerinhayden@gmail.com">kerinhayden@gmail.com</a> &nbsp;·&nbsp;
+      <a href="https://thoughtchemistry.io">ThoughtChemistry.io</a> &nbsp;·&nbsp;
+      <a href="https://instagram.com/mskerinhayden">@mskerinhayden</a> &nbsp;·&nbsp;
+      734-996-7653
+    </p>
+    <p class="footer-note">ISBN: 979-8-9956718-1-7 · First Edition · Published by Thought Chemistry Press, Ann Arbor, Michigan</p>
+  </footer>
+</div>
+</body>
+</html>
