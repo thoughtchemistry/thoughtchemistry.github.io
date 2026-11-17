@@ -236,23 +236,25 @@ color: var(--gold-dark);
 }
 .frameworks {
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 gap: 2px;
 margin: 8px 0;
 }
 .framework-block {
 background: rgba(42,37,32,0.88);
 color: var(--parchment);
-padding: 28px 20px;
+padding: 28px 16px;
 text-align: center;
+min-width: 0;
 }
 .framework-name {
 font-family: 'Playfair Display', serif;
-font-size: 22px;
+font-size: 19px;
 font-weight: 700;
 color: var(--gold-light);
 margin-bottom: 8px;
-letter-spacing: 0.05em;
+letter-spacing: 0.03em;
+overflow-wrap: anywhere;
 }
 .framework-desc {
 font-family: 'Cormorant Garamond', serif;
@@ -446,6 +448,10 @@ to { opacity: 1; transform: translateY(0); }
 <div class="framework-block">
 <p class="framework-name">AI SHAMING</p>
 <p class="framework-desc">Drop the flinch — name where your thinking ends and the tool begins</p>
+</div>
+<div class="framework-block">
+<p class="framework-name">GRIEVING HOME</p>
+<p class="framework-desc">When your backyard is now a data center</p>
 </div>
 </div>
 
